@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">   
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/blueimp-md5/2.19.0/js/md5.min.js" integrity="sha512-8pbzenDolL1l5OPSsoURCx9TEdMFTaeFipASVrMYKhuYtly+k3tcsQYliOEKTmuB1t7yuzAiVo+yd7SJz+ijFQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> 
+    <title>Document</title>
+</head>
+<body>
+    <form id='login' name='login'>
+        <span>Email:</span> <input class="txt" type="text" name="email" id="email">
+        <span>Password:</span> <input class="txt" type="password" name="password" id="pass">
+        <input class="butt" type="button" name="submit" value="Log In" onclick="return validateForm('form1');">
+        <span id="mailm"></span>
+        <span style="font-size:0.8em;">Don't have an account?</span>
+        <input class="butt" type="button" name="submit" value="Register now" onclick="openForm();">
+    </form>
+    <dialog id="modal">
+        <form action="" id="reg" name="reg" >
+            <span style="position:relative;left:45%;width:auto;cursor:pointer;" onclick="closeForm();">&#10006</span>
+            <span>Name: </span><input type="text" id="namereg" class="txt" name="name"><br>
+            <span>Email: </span><input type="text" id="emailreg"  class="txt" name="email"><br>
+            <span>Password: </span><input type="password" id="passreg"  class="txt" name="pass"><br>
+            <span>Confirm password: </span><input type="password" class="txt" name="conpass" style="margin-bottom:1em;">
+            <span id="val"></span>
+            <input type="button" value="Sign up" class="butt" id="butto" onclick="return validateForm('form2');">
+        </form>
+    </dialog>
+    <script src="javascript.js"></script>
+</body>
+</html>
